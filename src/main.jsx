@@ -11,9 +11,17 @@ import Article from "./pages/Article";
 
 // router creation
 
+
 const router = createBrowserRouter([
   {
     element: <App />,
+
+  loader: () => {
+      const weather = "sunny";
+
+      return weather;
+    },
+    id: "app",
     children: [
       {
         path: "/",
